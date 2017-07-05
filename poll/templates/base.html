@@ -9,7 +9,43 @@
     <title>Base</title>
     {% endblock %}
 </head>
+
 <body>
+<div class="container">
+<br>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/poll/">Le` Social</a>
+    </div>
+      {% if user.is_authenticated %}
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/poll/">Home</a></li>
+      <li><a href="/poll/profile/">View Profile</a></li>
+      <li><a href="/poll/change-password/">change Password</a></li>
+      <li><a href="/poll/profile/edit/">Edit Profile</a></li>
+      <li><a href="/poll/password-reset/">Reset Password</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/poll/logout/"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+{% else %}
+      <ul class="nav navbar-nav">
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/poll/register/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/poll/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+
+{% endif %}
+  </div>
+</nav>
+</div>
+
+
+
+
 {% block body %}
     <h1>base</h1>
 

@@ -2,13 +2,17 @@
 
 {% block head %}
     <title>Home</title>
-    {% endblock %}
+
+    {% load static %}
+    <link rel="stylesheet" href="../../static/poll/style.css" type = "text/css" >
+{% endblock %}
 
 {% block body %}
-    <ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="/poll/login">Login</a></li>
-  <li role="presentation"><a href="/poll/form">Fill Form</a></li>
-</ul>
+    <div id="back">
+         <h2>Welcome to Le` Social</h2>
+    </div>
+    <div class="container" id="back">
+    <br>
     <h1>Home</h1>
+    </div>
 {% endblock %}
